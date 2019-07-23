@@ -14,6 +14,8 @@
 		F4B3902E22E6F47700E06629 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B3902C22E6F47700E06629 /* LaunchScreen.storyboard */; };
 		F4B3903922E6F47700E06629 /* SwiftListToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3903822E6F47700E06629 /* SwiftListToolTests.swift */; };
 		F4B3904422E6F47700E06629 /* SwiftListToolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3904322E6F47700E06629 /* SwiftListToolUITests.swift */; };
+		F4B3905822E7096000E06629 /* ZCHomeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3905622E7096000E06629 /* ZCHomeListViewController.swift */; };
+		F4B3905922E7096000E06629 /* ZCHomeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B3905722E7096000E06629 /* ZCHomeListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		F4B3903F22E6F47700E06629 /* SwiftListToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftListToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B3904322E6F47700E06629 /* SwiftListToolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftListToolUITests.swift; sourceTree = "<group>"; };
 		F4B3904522E6F47700E06629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4B3905622E7096000E06629 /* ZCHomeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCHomeListViewController.swift; sourceTree = "<group>"; };
+		F4B3905722E7096000E06629 /* ZCHomeListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZCHomeListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		F4B3902222E6F47500E06629 /* SwiftListTool */ = {
 			isa = PBXGroup;
 			children = (
+				F4B3905122E7084A00E06629 /* Classes */,
 				F4B3902322E6F47500E06629 /* AppDelegate.swift */,
 				F4B3902522E6F47500E06629 /* ViewController.swift */,
 				F4B3902722E6F47500E06629 /* Main.storyboard */,
@@ -123,6 +128,47 @@
 				F4B3904522E6F47700E06629 /* Info.plist */,
 			);
 			path = SwiftListToolUITests;
+			sourceTree = "<group>";
+		};
+		F4B3905122E7084A00E06629 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F4B3905522E7088400E06629 /* ViewController */,
+				F4B3905422E7087C00E06629 /* viewModel */,
+				F4B3905322E7087600E06629 /* model */,
+				F4B3905222E7087000E06629 /* view */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F4B3905222E7087000E06629 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		F4B3905322E7087600E06629 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F4B3905422E7087C00E06629 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		F4B3905522E7088400E06629 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F4B3905622E7096000E06629 /* ZCHomeListViewController.swift */,
+				F4B3905722E7096000E06629 /* ZCHomeListViewController.xib */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +277,7 @@
 			files = (
 				F4B3902E22E6F47700E06629 /* LaunchScreen.storyboard in Resources */,
 				F4B3902B22E6F47700E06629 /* Assets.xcassets in Resources */,
+				F4B3905922E7096000E06629 /* ZCHomeListViewController.xib in Resources */,
 				F4B3902922E6F47500E06629 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4B3902622E6F47500E06629 /* ViewController.swift in Sources */,
+				F4B3905822E7096000E06629 /* ZCHomeListViewController.swift in Sources */,
 				F4B3902422E6F47500E06629 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
