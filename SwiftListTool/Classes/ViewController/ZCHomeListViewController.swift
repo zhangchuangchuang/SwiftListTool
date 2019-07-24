@@ -7,9 +7,15 @@
 //
 
 import UIKit
-
 class ZCHomeListViewController: UIViewController {
 
+    @IBOutlet var my_scrollView: UIScrollView!//滚动视图
+    @IBOutlet var bg_collec: UIView!
+    @IBOutlet var my_tableView: UITableView!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

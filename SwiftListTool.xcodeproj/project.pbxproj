@@ -16,6 +16,10 @@
 		F4B3904422E6F47700E06629 /* SwiftListToolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3904322E6F47700E06629 /* SwiftListToolUITests.swift */; };
 		F4B3905822E7096000E06629 /* ZCHomeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3905622E7096000E06629 /* ZCHomeListViewController.swift */; };
 		F4B3905922E7096000E06629 /* ZCHomeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B3905722E7096000E06629 /* ZCHomeListViewController.xib */; };
+		F4FA19E222E80820007EA60F /* ZCCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA19E122E80820007EA60F /* ZCCollectionView.swift */; };
+		F4FA19E422E8304C007EA60F /* ZCTableHeardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA19E322E8304C007EA60F /* ZCTableHeardView.swift */; };
+		F4FA19EE22E84377007EA60F /* UIColor-Catergory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA19ED22E84377007EA60F /* UIColor-Catergory.swift */; };
+		F4FA19F022E85C40007EA60F /* ZCPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA19EF22E85C40007EA60F /* ZCPageContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		F4B3904522E6F47700E06629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4B3905622E7096000E06629 /* ZCHomeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCHomeListViewController.swift; sourceTree = "<group>"; };
 		F4B3905722E7096000E06629 /* ZCHomeListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZCHomeListViewController.xib; sourceTree = "<group>"; };
+		F4FA19E122E80820007EA60F /* ZCCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCollectionView.swift; sourceTree = "<group>"; };
+		F4FA19E322E8304C007EA60F /* ZCTableHeardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCTableHeardView.swift; sourceTree = "<group>"; };
+		F4FA19ED22E84377007EA60F /* UIColor-Catergory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Catergory.swift"; sourceTree = "<group>"; };
+		F4FA19EF22E85C40007EA60F /* ZCPageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCPageContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 		F4B3902222E6F47500E06629 /* SwiftListTool */ = {
 			isa = PBXGroup;
 			children = (
+				F4FA19E522E84095007EA60F /* Extension */,
 				F4B3905122E7084A00E06629 /* Classes */,
 				F4B3902322E6F47500E06629 /* AppDelegate.swift */,
 				F4B3902522E6F47500E06629 /* ViewController.swift */,
@@ -144,6 +153,9 @@
 		F4B3905222E7087000E06629 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				F4FA19E122E80820007EA60F /* ZCCollectionView.swift */,
+				F4FA19E322E8304C007EA60F /* ZCTableHeardView.swift */,
+				F4FA19EF22E85C40007EA60F /* ZCPageContentView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -169,6 +181,14 @@
 				F4B3905722E7096000E06629 /* ZCHomeListViewController.xib */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F4FA19E522E84095007EA60F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F4FA19ED22E84377007EA60F /* UIColor-Catergory.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +259,7 @@
 				TargetAttributes = {
 					F4B3901F22E6F47500E06629 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 					F4B3903322E6F47700E06629 = {
 						CreatedOnToolsVersion = 10.3;
@@ -303,8 +324,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4FA19E422E8304C007EA60F /* ZCTableHeardView.swift in Sources */,
+				F4FA19F022E85C40007EA60F /* ZCPageContentView.swift in Sources */,
 				F4B3902622E6F47500E06629 /* ViewController.swift in Sources */,
+				F4FA19E222E80820007EA60F /* ZCCollectionView.swift in Sources */,
 				F4B3905822E7096000E06629 /* ZCHomeListViewController.swift in Sources */,
+				F4FA19EE22E84377007EA60F /* UIColor-Catergory.swift in Sources */,
 				F4B3902422E6F47500E06629 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49S365C6A7;
 				INFOPLIST_FILE = SwiftListTool/Info.plist;
@@ -489,6 +515,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zc.SwiftListTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -498,6 +526,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49S365C6A7;
 				INFOPLIST_FILE = SwiftListTool/Info.plist;
@@ -507,6 +536,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zc.SwiftListTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

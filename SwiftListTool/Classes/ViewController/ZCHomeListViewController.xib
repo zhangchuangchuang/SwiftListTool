@@ -1,13 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZCHomeListViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZCHomeListViewController" customModule="SwiftListTool" customModuleProvider="target">
             <connections>
+                <outlet property="bg_collec" destination="ROT-it-mVD" id="JQx-nB-Ytn"/>
+                <outlet property="my_scrollView" destination="W3W-Ef-PEg" id="c9h-wY-cOz"/>
+                <outlet property="my_tableView" destination="QxV-4v-GcH" id="7hC-VY-T6A"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +22,56 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3W-Ef-PEg">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1B5-lN-OtJ">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="150" id="O2D-VD-YwK"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROT-it-mVD" customClass="ZCCollectionView" customModule="SwiftListTool" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="150" width="375" height="0.0"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" id="Pe7-8Q-1Yn"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QxV-4v-GcH">
+                            <rect key="frame" x="0.0" y="150" width="375" height="0.0"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" id="6lF-58-O2p"/>
+                            </constraints>
+                        </tableView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="1B5-lN-OtJ" firstAttribute="top" secondItem="W3W-Ef-PEg" secondAttribute="top" id="Enj-XE-8zb"/>
+                        <constraint firstItem="QxV-4v-GcH" firstAttribute="top" secondItem="ROT-it-mVD" secondAttribute="bottom" id="JVH-Hc-5xN"/>
+                        <constraint firstItem="1B5-lN-OtJ" firstAttribute="centerX" secondItem="W3W-Ef-PEg" secondAttribute="centerX" id="JYs-4N-i4p"/>
+                        <constraint firstItem="1B5-lN-OtJ" firstAttribute="leading" secondItem="W3W-Ef-PEg" secondAttribute="leading" id="NT2-j6-afE"/>
+                        <constraint firstAttribute="trailing" secondItem="QxV-4v-GcH" secondAttribute="trailing" id="UaA-Tg-SlE"/>
+                        <constraint firstAttribute="trailing" secondItem="ROT-it-mVD" secondAttribute="trailing" id="VdK-Uk-D7R"/>
+                        <constraint firstItem="QxV-4v-GcH" firstAttribute="leading" secondItem="W3W-Ef-PEg" secondAttribute="leading" id="XxI-gZ-xzY"/>
+                        <constraint firstAttribute="trailing" secondItem="1B5-lN-OtJ" secondAttribute="trailing" id="f57-v2-GiH"/>
+                        <constraint firstAttribute="bottom" secondItem="QxV-4v-GcH" secondAttribute="bottom" id="gaQ-wl-bZv"/>
+                        <constraint firstItem="ROT-it-mVD" firstAttribute="top" secondItem="1B5-lN-OtJ" secondAttribute="bottom" id="hRc-C0-3Ko"/>
+                        <constraint firstItem="ROT-it-mVD" firstAttribute="leading" secondItem="W3W-Ef-PEg" secondAttribute="leading" id="wgr-xr-Sv7"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="W3W-Ef-PEg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0Nz-ME-Svd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="W3W-Ef-PEg" secondAttribute="bottom" id="6Wc-KO-kOF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="W3W-Ef-PEg" secondAttribute="trailing" id="DTj-n2-PQ2"/>
+                <constraint firstItem="W3W-Ef-PEg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mUa-5R-FG9"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="492" y="51"/>
         </view>
     </objects>
 </document>
