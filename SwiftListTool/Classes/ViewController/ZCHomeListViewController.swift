@@ -9,28 +9,38 @@
 import UIKit
 class ZCHomeListViewController: UIViewController {
 
-    @IBOutlet var my_scrollView: UIScrollView!//滚动视图
-    @IBOutlet var bg_collec: UIView!
-    @IBOutlet var my_tableView: UITableView!
+    @IBOutlet var bg_collec: ZCTableHeardView!
     
-    
-    
+    private lazy var pageTitleView :ZCTableHeardView = {[weak self] in
+        let titleFrame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 60)
+        
+        let titles = ["我不好","你好","嫁给我","娶我"]
+        let titeView = ZCTableHeardView(frame:titleFrame, titles: titles)
+        titeView.delegate = self
+        return titeView
+    }()
+//    private lazy var pageContentView : ZCPageContentView = {[weak self]in
+//        let <#name#> = <#value#>
+//        
+//        
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpUI()
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+extension ZCHomeListViewController{
+    private func setUpUI(){
+        view.addSubview(pageTitleView)
     }
-    */
-
+ 
+}
+extension ZCHomeListViewController :HeardTitleViewDelegate{
+    func heardTitleDelegate(titleView: ZCTableHeardView, selecTedIndex index: Int) {
+        <#code#>
+    }
+    
+    
 }

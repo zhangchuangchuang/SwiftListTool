@@ -16,6 +16,7 @@
 		F4B3904422E6F47700E06629 /* SwiftListToolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3904322E6F47700E06629 /* SwiftListToolUITests.swift */; };
 		F4B3905822E7096000E06629 /* ZCHomeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3905622E7096000E06629 /* ZCHomeListViewController.swift */; };
 		F4B3905922E7096000E06629 /* ZCHomeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B3905722E7096000E06629 /* ZCHomeListViewController.xib */; };
+		F4EC4E4E22E99A2E00970C31 /* const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EC4E4D22E99A2E00970C31 /* const.swift */; };
 		F4FA19E222E80820007EA60F /* ZCCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA19E122E80820007EA60F /* ZCCollectionView.swift */; };
 		F4FA19E422E8304C007EA60F /* ZCTableHeardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA19E322E8304C007EA60F /* ZCTableHeardView.swift */; };
 		F4FA19EE22E84377007EA60F /* UIColor-Catergory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA19ED22E84377007EA60F /* UIColor-Catergory.swift */; };
@@ -55,6 +56,7 @@
 		F4B3904522E6F47700E06629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4B3905622E7096000E06629 /* ZCHomeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCHomeListViewController.swift; sourceTree = "<group>"; };
 		F4B3905722E7096000E06629 /* ZCHomeListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZCHomeListViewController.xib; sourceTree = "<group>"; };
+		F4EC4E4D22E99A2E00970C31 /* const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = const.swift; sourceTree = "<group>"; };
 		F4FA19E122E80820007EA60F /* ZCCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCollectionView.swift; sourceTree = "<group>"; };
 		F4FA19E322E8304C007EA60F /* ZCTableHeardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCTableHeardView.swift; sourceTree = "<group>"; };
 		F4FA19ED22E84377007EA60F /* UIColor-Catergory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Catergory.swift"; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		F4B3902222E6F47500E06629 /* SwiftListTool */ = {
 			isa = PBXGroup;
 			children = (
+				F4EC4E4C22E999DD00970C31 /* Const */,
 				F4FA19E522E84095007EA60F /* Extension */,
 				F4B3905122E7084A00E06629 /* Classes */,
 				F4B3902322E6F47500E06629 /* AppDelegate.swift */,
@@ -181,6 +184,14 @@
 				F4B3905722E7096000E06629 /* ZCHomeListViewController.xib */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F4EC4E4C22E999DD00970C31 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				F4EC4E4D22E99A2E00970C31 /* const.swift */,
+			);
+			path = Const;
 			sourceTree = "<group>";
 		};
 		F4FA19E522E84095007EA60F /* Extension */ = {
@@ -329,6 +340,7 @@
 				F4B3902622E6F47500E06629 /* ViewController.swift in Sources */,
 				F4FA19E222E80820007EA60F /* ZCCollectionView.swift in Sources */,
 				F4B3905822E7096000E06629 /* ZCHomeListViewController.swift in Sources */,
+				F4EC4E4E22E99A2E00970C31 /* const.swift in Sources */,
 				F4FA19EE22E84377007EA60F /* UIColor-Catergory.swift in Sources */,
 				F4B3902422E6F47500E06629 /* AppDelegate.swift in Sources */,
 			);
