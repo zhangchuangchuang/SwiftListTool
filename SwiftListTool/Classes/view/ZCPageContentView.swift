@@ -25,7 +25,11 @@ class ZCPageContentView: UIView {
         
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = (self?.bounds.size)!
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+        layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
         
+        //2. 创建 UICollectionView
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.isPagingEnabled = true
@@ -33,13 +37,14 @@ class ZCPageContentView: UIView {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: contentCellID)
-       return collectionView
+        
+        return collectionView
     }()
      init(frame: CGRect,childVcs:[UIViewController],parentVc:UIViewController?) {
         self.childVcs = childVcs
         self.parentViewController = parentVc
         super.init(frame:frame)
-        
+        setUpUI()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -49,6 +54,14 @@ class ZCPageContentView: UIView {
 
 extension ZCPageContentView{
     private func setUpUI(){
+        //1. 将所有子控制添加到父控制器中
+        for childVc in childVcs {
+            parentViewController?.addChild(childVc)
+        }
+        
+        //2. 添加 UICollectionView 用于在 cell 中存放控制器 view
+        addSubview(collectionView)
+        collectionView.frame = bounds
         
     }
 }
@@ -56,7 +69,7 @@ extension ZCPageContentView{
 //MARK: UICollectionViewDataSource 协议
 extension ZCPageContentView :UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return childVcs.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -72,7 +85,7 @@ extension ZCPageContentView :UICollectionViewDataSource{
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-         return childVcs.count
+         return 1
     }
 }
 //MARK: UICollectionViewDelegate 协议
